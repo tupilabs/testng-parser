@@ -55,7 +55,7 @@ public class TestTestNGParser extends TestCase {
 
 	public void testTestNGParser() {
 		ClassLoader cl = TestTestNGParser.class.getClassLoader();
-		URL url = cl.getResource("com/tupilabs/result_seekers/testng/testng-results.xml");
+		URL url = cl.getResource("com/tupilabs/testng/parser/testng-results.xml");
 		File file = new File(url.getFile());
 
 		Suite suite = null;
@@ -109,7 +109,7 @@ public class TestTestNGParser extends TestCase {
 	public void testInvalidTestNGFile() {
 		ClassLoader cl = TestTestNGParser.class.getClassLoader();
 		URL url = cl
-				.getResource("com/tupilabs/result_seekers/testng/testng-invalid-results.xml");
+				.getResource("com/tupilabs/testng/parser/testng-invalid-results.xml");
 		File file = new File(url.getFile());
 
 		try {

@@ -28,18 +28,19 @@
 	</organization>
 
 	<scm>
-		<url>http://github.com/tupilabs/testng-parser</url>
+		<url>https://github.com/tupilabs/testng-parser</url>
 		<connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
 		<developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>http://www.github.com/tupilabs/testng-parser/ssues</url>
+		<url>https://www.github.com/tupilabs/testng-parser/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>Jenkins</system>
+		<url>https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/</url>
     </ciManagement>
     
     <licenses>
