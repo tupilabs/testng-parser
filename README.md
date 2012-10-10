@@ -3,7 +3,13 @@
 TestNG Parser project with a simple TestNG parser, used by other projects such 
 as Jenkins plug-ins.
 
-## Example
+## Build status
+
+[![Build Status](https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/badge/icon)](https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/)
+
+## Usage example
+
+Below an example of how to use this parser.
 
     ClassLoader cl = TestTestNGParser.class.getClassLoader();
     URL url = cl.getResource("com/tupilabs/testng/parser/testng-results.xml");
@@ -30,5 +36,11 @@ as Jenkins plug-ins.
     
     TestMethod testMethod = testMethods.get(0);
     assertTrue(testMethod.getStatus().equals("PASS"));
+    
+## Licensing
 
-[![Build Status](https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/badge/icon)](https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/)
+This project is licensed under MIT License.
+
+## Contributing
+
+Fork it, send pull requests or drop us a message :-)
