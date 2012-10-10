@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.tupilabs</groupId>
+	<artifactId>testng-parser</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<name>TestNG Parser</name>
+	<description>TestNG Parser</description>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+	
+	<url>https://github.com/kinow/testng-parser</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<organization>
+		<name>TupiLabs</name>
+		<url>http://www.tupilabs.com</url>
+	</organization>
+
+	<scm>
+		<url>http://github.com/tupilabs/testng-parser</url>
+		<connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
+		<developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>http://www.github.com/tupilabs/testng-parser/ssues</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Jenkins</system>
+    </ciManagement>
+    
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+</project>
