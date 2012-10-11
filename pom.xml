@@ -4,7 +4,7 @@
 
 	<groupId>com.tupilabs</groupId>
 	<artifactId>testng-parser</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 
 	<name>TestNG Parser</name>
 	<description>TestNG Parser</description>
