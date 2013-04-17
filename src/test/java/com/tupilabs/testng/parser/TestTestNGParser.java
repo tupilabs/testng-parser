@@ -26,13 +26,7 @@ package com.tupilabs.testng.parser;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
-
-import com.tupilabs.testng.parser.Class;
-import com.tupilabs.testng.parser.ParserException;
-import com.tupilabs.testng.parser.Suite;
-import com.tupilabs.testng.parser.Test;
-import com.tupilabs.testng.parser.TestMethod;
-import com.tupilabs.testng.parser.TestNGParser;
+import java.util.Set;
 
 import junit.framework.TestCase;
 
@@ -89,11 +83,11 @@ public class TestTestNGParser extends TestCase {
 
 		assertTrue(clazz.getName().equals("br.eti.kinoshita.Test1"));
 
-		List<TestMethod> testMethods = clazz.getTestMethods();
+		Set<TestMethod> testMethods = clazz.getTestMethods();
 
 		assertTrue(testMethods.size() == 1);
 
-		TestMethod testMethod = testMethods.get(0);
+		TestMethod testMethod = testMethods.iterator().next();
 
 		assertNotNull(testMethod);
 

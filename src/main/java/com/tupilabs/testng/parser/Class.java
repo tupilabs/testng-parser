@@ -24,8 +24,9 @@
 package com.tupilabs.testng.parser;
 
 import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Represents the <class> tag. This tag is child of the <test> tag.
@@ -41,13 +42,13 @@ public class Class implements Serializable {
 	/**
 	 * The list of <test-method> tags.
 	 */
-	private List<TestMethod> testMethods;
+	private Set<TestMethod> testMethods;
 	/**
 	 * Default constructor. Initializes the list of <test-method> tags.
 	 */
 	public Class() {
 		super();
-		this.testMethods = new LinkedList<TestMethod>();
+		this.testMethods = Collections.synchronizedSet(new HashSet<TestMethod>());
 	}
 	/**
 	 * Retrieves the name.
@@ -67,7 +68,7 @@ public class Class implements Serializable {
 	 * Retrieves the list of <test-method> tags.
 	 * @return the testMethods
 	 */
-	public List<TestMethod> getTestMethods() {
+	public Set<TestMethod> getTestMethods() {
 		return testMethods;
 	}
 	/**
@@ -76,6 +77,13 @@ public class Class implements Serializable {
 	 * @return true if added sucessfully, otherwise false.
 	 */
 	public boolean addTestMethod(TestMethod testMethod) {
+	    for (TestMethod method : this.testMethods) {
+	        if (method.equals(testMethod)) {
+	            if ((Statuses.get(testMethod.getStatus()) == Statuses.FAIL) || (Statuses.get(testMethod.getStatus()) == Statuses.SKIP)) {
+	                method.setStatus(testMethod.getStatus());
+	            }
+	        }
+	    }
 		return this.testMethods.add(testMethod);
 	}
 	/**

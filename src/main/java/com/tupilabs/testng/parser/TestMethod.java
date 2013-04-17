@@ -27,7 +27,7 @@ import java.io.Serializable;
 
 /**
  * Represents the <test-method> tag. This tag is child of the <class> tag.
- * 
+ *
  * @since 0.1
  */
 public class TestMethod implements Serializable {
@@ -180,5 +180,42 @@ public class TestMethod implements Serializable {
 	 */
 	public void setDataProvider(String dataProvider) {
 		this.dataProvider = dataProvider;
+	}
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+	    if (obj != null && obj instanceof TestMethod) {
+	        TestMethod other = (TestMethod) obj;
+	        return 
+	                this.signature != null
+	                && this.signature.equals(other.signature)
+	                && this.name != null
+	                && this.name.equals(other.name)
+	                && this.dataProvider != null
+	                && this.dataProvider.equals(other.dataProvider); 
+	    }
+	    return false;
+	}
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+	    int hash = getClass().getCanonicalName().hashCode();
+	    hash <<= 2;
+	    if (this.signature != null) {
+	        hash ^= this.signature.hashCode();
+	    }
+	    if (this.name != null) {
+	        hash ^= this.name.hashCode();
+	    }
+	    if (this.dataProvider != null) {
+	        hash ^= this.dataProvider.hashCode();
+	    }
+	    return hash;
 	}
 }
