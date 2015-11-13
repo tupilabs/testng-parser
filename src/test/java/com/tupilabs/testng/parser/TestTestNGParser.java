@@ -114,4 +114,30 @@ public class TestTestNGParser extends TestCase {
 
 	}
 
+	private Suite parseResourceSuite(String name) {
+		File file = new File(TestTestNGParser.class.getResource(name).getFile());
+		Suite suite = null;
+		try {
+			suite = this.parser.parse(file);
+		} catch (ParserException e) {
+			fail("Failed to parse testng file '" + file + "': " + e.getMessage());
+		}
+		return suite;
+	}
+
+	public void testMethodIterationOrder() {
+
+		Suite suite = parseResourceSuite("testng-results-ordered.xml");
+
+		String last = null;
+		for (TestMethod method : suite.getTests().get(0).getClasses().get(0).getTestMethods()) {
+			String testName = method.getName();
+			if (last != null) {
+				assertTrue("test not in correct order:" + testName,
+						last.compareTo(method.getName()) < 0);
+			}
+			last = testName;
+		}
+		assertNotNull("did not find any testMethods..", last);
+	}
 }
