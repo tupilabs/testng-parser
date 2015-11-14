@@ -1,0 +1,22 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z">
+      <class name="br.eti.kinoshita.Test1">
+        <test-method status="PASS" signature="test001()" name="test001" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test002()" name="test002" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test003()" name="test003" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test004()" name="test004" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test005()" name="test005" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test006()" name="test006" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test007()" name="test007" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test008()" name="test008" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test009()" name="test009" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+        <test-method status="PASS" signature="test010()" name="test010" duration-ms="0" started-at="2010-11-17T13:31:41Z" finished-at="2010-11-17T13:31:41Z"></test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

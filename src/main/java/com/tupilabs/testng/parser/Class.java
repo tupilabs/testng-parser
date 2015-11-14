@@ -25,7 +25,7 @@ package com.tupilabs.testng.parser;
 
 import java.io.Serializable;
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -48,7 +48,7 @@ public class Class implements Serializable {
 	 */
 	public Class() {
 		super();
-		this.testMethods = Collections.synchronizedSet(new HashSet<TestMethod>());
+		this.testMethods = Collections.synchronizedSet(new LinkedHashSet<TestMethod>());
 	}
 	/**
 	 * Retrieves the name.
