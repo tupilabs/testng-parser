@@ -1,20 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.tupilabs</groupId>
 	<artifactId>testng-parser</artifactId>
 	<version>0.3-SNAPSHOT</version>
 
-	<name>TestNG Parser</name>
+	<name>${project.groupId}:${project.artifactId}</name>
 	<description>TestNG Parser</description>
 
 	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
+		<groupId>com.tupilabs</groupId>
+		<artifactId>parent-oss</artifactId>
+		<version>0.1</version>
 	</parent>
-	
+
 	<url>https://github.com/kinow/testng-parser</url>
 
 	<properties>
@@ -30,6 +30,7 @@
 		<url>https://github.com/tupilabs/testng-parser</url>
 		<connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
 		<developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
+		<tag>testng-parser-0.3</tag>
 	</scm>
 
 	<issueManagement>
@@ -40,23 +41,23 @@
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/</url>
-    </ciManagement>
-    
-    <licenses>
-        <license>
-            <name>MIT</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    
+	</ciManagement>
+
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
 	<dependencies>
 		<dependency>
+			<!-- sounds funny, but we are testing the testng parser with JUnit :) -->
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 </project>
