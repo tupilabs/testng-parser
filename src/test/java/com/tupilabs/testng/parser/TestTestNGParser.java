@@ -53,13 +53,16 @@ public class TestTestNGParser extends TestCase {
 		File file = new File(url.getFile());
 
 		Suite suite = null;
+		List<Suite> suites = null;
+
 		try {
-			suite = this.parser.parse(file);
+			suites = this.parser.parse(file);
+			suite = suites.get(0);
 		} catch (ParserException e) {
 			fail("Failed to parse testng file '" + file + "': " + e.getMessage());
 		}
 
-		assertNotNull(suite);
+		assertNotNull(suites);
 
 		assertTrue(suite.getName().equals("Command line suite"));
 		assertTrue(suite.getDurationMs().equals("0"));
@@ -114,29 +117,32 @@ public class TestTestNGParser extends TestCase {
 
 	}
 
-	private Suite parseResourceSuite(String name) {
+	private List<Suite> parseResourceSuite(String name) {
 		File file = new File(TestTestNGParser.class.getResource(name).getFile());
-		Suite suite = null;
+		//Suite suite = null;
+		List<Suite> suites = null;
 		try {
-			suite = this.parser.parse(file);
+			suites = this.parser.parse(file);
 		} catch (ParserException e) {
 			fail("Failed to parse testng file '" + file + "': " + e.getMessage());
 		}
-		return suite;
+		return suites;
 	}
 
 	public void testMethodIterationOrder() {
 
-		Suite suite = parseResourceSuite("testng-results-ordered.xml");
+		List<Suite> suites = parseResourceSuite("testng-results-ordered.xml");
 
 		String last = null;
-		for (TestMethod method : suite.getTests().get(0).getClasses().get(0).getTestMethods()) {
-			String testName = method.getName();
-			if (last != null) {
-				assertTrue("test not in correct order:" + testName,
-						last.compareTo(method.getName()) < 0);
+		for (Suite suite : suites) {
+			for (TestMethod method : suite.getTests().get(0).getClasses().get(0).getTestMethods()) {
+				String testName = method.getName();
+				if (last != null) {
+					assertTrue("test not in correct order:" + testName,
+							last.compareTo(method.getName()) < 0);
+				}
+				last = testName;
 			}
-			last = testName;
 		}
 		assertNotNull("did not find any testMethods..", last);
 	}
