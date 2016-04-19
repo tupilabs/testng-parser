@@ -60,7 +60,6 @@ public class TestNGParser implements Serializable {
 
 		FileInputStream fileInputStream = null;
 		final TestNGXmlHandler handler = new TestNGXmlHandler();
-		//final Suite suite;
 
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		factory.setValidating(false);
@@ -72,7 +71,7 @@ public class TestNGParser implements Serializable {
 		}
 
 		SAXParser parser = null;
-		List<Suite> suites;
+		final List<Suite> suites;
 
 		try {
 			fileInputStream = new FileInputStream(file);
@@ -80,13 +79,9 @@ public class TestNGParser implements Serializable {
 			parser.parse(fileInputStream, handler);
 
 			suites = handler.getSuite();
-			if (suites == null) {
-				throw new ParserException("Error while parsing file " + file + ": Null");
-			} else {
-				// Setting file for all the suites
-				for (Suite suite : suites) {
-					suite.setFile(file.getAbsolutePath());
-				}
+			// Setting file for all the suites
+			for (Suite suite : suites) {
+				suite.setFile(file.getAbsolutePath());
 			}
 
 		} catch (ParserConfigurationException e) {

@@ -56,7 +56,7 @@ public class TestNGXmlHandler extends DefaultHandler implements Serializable {
 	private Test test;
 	private Class clazz;
 	private TestMethod testMethod;
-	List<Suite> suitesList;
+	private final List<Suite> suitesList;
 	/**
 	 * Default constructor.
 	 */
