@@ -24,6 +24,8 @@
 package com.tupilabs.testng.parser;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -54,11 +56,13 @@ public class TestNGXmlHandler extends DefaultHandler implements Serializable {
 	private Test test;
 	private Class clazz;
 	private TestMethod testMethod;
+	List<Suite> suitesList;
 	/**
 	 * Default constructor.
 	 */
 	public TestNGXmlHandler() {
 		super();
+		suitesList = new ArrayList<>();
 	}
 	/*
 	 * (non-Javadoc)
@@ -115,13 +119,15 @@ public class TestNGXmlHandler extends DefaultHandler implements Serializable {
 			test.addClass(clazz);
 		} else if (TEST_METHOD.equals(qName)) {
 			clazz.addTestMethod(testMethod);
+		} else if (SUITE.equals(qName)){
+			this.suitesList.add(this.suite);
 		}
 	}
 	/**
-	 * Retrieves the parsed Suite.
-	 * @return the parsed Suite.
+	 * Retrieves the parsed Suites.
+	 * @return a List of parsed Suites.
 	 */
-	public Suite getSuite() {
-		return this.suite;
+	public List<Suite> getSuite() {
+		return suitesList;
 	}
 }

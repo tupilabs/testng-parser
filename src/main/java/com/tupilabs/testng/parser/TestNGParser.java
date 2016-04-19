@@ -27,6 +27,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -50,16 +51,16 @@ public class TestNGParser implements Serializable {
 	 * Parses the content of an input stream and returns a Suite.
 	 * 
 	 * @param inputStream the input stream.
-	 * @return Resulting object.
+	 * @return List of Resulting object.
 	 * @throws SAXException
 	 * @throws IOException
 	 * @throws ParserConfigurationException
 	 */
-	public Suite parse(File file) throws ParserException {
+	public List<Suite> parse(File file) throws ParserException {
 
 		FileInputStream fileInputStream = null;
 		final TestNGXmlHandler handler = new TestNGXmlHandler();
-		final Suite suite;
+		//final Suite suite;
 
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		factory.setValidating(false);
@@ -71,17 +72,23 @@ public class TestNGParser implements Serializable {
 		}
 
 		SAXParser parser = null;
+		List<Suite> suites;
 
 		try {
 			fileInputStream = new FileInputStream(file);
 			parser = factory.newSAXParser();
 			parser.parse(fileInputStream, handler);
 
-			suite = handler.getSuite();
-			if (suite == null) {
+			suites = handler.getSuite();
+			if (suites == null) {
 				throw new ParserException("Error while parsing file " + file + ": Null");
+			} else {
+				// Setting file for all the suites
+				for (Suite suite : suites) {
+					suite.setFile(file.getAbsolutePath());
+				}
 			}
-			suite.setFile(file.getAbsolutePath());
+
 		} catch (ParserConfigurationException e) {
 			throw new ParserException(e);
 		} catch (SAXException e) {
@@ -97,8 +104,7 @@ public class TestNGParser implements Serializable {
 				}
 			}
 		}
-
-		return suite;
+		return suites;
 	}
 
 }
