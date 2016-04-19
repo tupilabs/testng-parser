@@ -37,20 +37,20 @@ public class ParserException extends RuntimeException {
 		super();
 	}
 	/**
-	 * @param message
+	 * @param message exception message
 	 */
 	public ParserException(String message) {
 		super(message);
 	}
 	/**
-	 * @param cause
+	 * @param cause exception cause
 	 */
 	public ParserException(Throwable cause) {
 		super(cause);
 	}
 	/**
-	 * @param message
-	 * @param cause
+	 * @param message exception message
+	 * @param cause exception cause
 	 */
 	public ParserException(String message, Throwable cause) {
 		super(message, cause);

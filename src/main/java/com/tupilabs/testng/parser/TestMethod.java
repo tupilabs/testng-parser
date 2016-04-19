@@ -26,7 +26,7 @@ package com.tupilabs.testng.parser;
 import java.io.Serializable;
 
 /**
- * Represents the <test-method> tag. This tag is child of the <class> tag.
+ * Represents the &lt;test-method&gt; tag. This tag is child of the &lt;class&gt; tag.
  *
  * @since 0.1
  */

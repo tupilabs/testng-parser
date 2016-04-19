@@ -1,62 +1,62 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>testng-parser</artifactId>
-	<version>0.4-SNAPSHOT</version>
+    <artifactId>testng-parser</artifactId>
+    <version>0.4-SNAPSHOT</version>
 
-	<name>${project.groupId}:${project.artifactId}</name>
-	<description>TestNG Parser</description>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>TestNG Parser</description>
 
-	<parent>
-		<groupId>com.tupilabs</groupId>
-		<artifactId>parent-oss</artifactId>
-		<version>0.1</version>
-	</parent>
+    <parent>
+        <groupId>com.tupilabs</groupId>
+        <artifactId>parent-oss</artifactId>
+        <version>0.1</version>
+    </parent>
 
-	<url>https://github.com/kinow/testng-parser</url>
+    <url>https://github.com/kinow/testng-parser</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<organization>
-		<name>TupiLabs</name>
-		<url>http://www.tupilabs.com</url>
-	</organization>
+    <organization>
+        <name>TupiLabs</name>
+        <url>http://www.tupilabs.com</url>
+    </organization>
 
-	<scm>
-		<url>https://github.com/tupilabs/testng-parser</url>
-		<connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
-		<developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
-		<tag>testng-parser-0.3</tag>
-	</scm>
+    <scm>
+        <url>https://github.com/tupilabs/testng-parser</url>
+        <connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
+        <developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
+    </scm>
 
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://www.github.com/tupilabs/testng-parser/issues</url>
-	</issueManagement>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://www.github.com/tupilabs/testng-parser/issues</url>
+    </issueManagement>
 
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/</url>
-	</ciManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://buildhive.cloudbees.com/job/tupilabs/job/testng-parser/</url>
+    </ciManagement>
 
-	<licenses>
-		<license>
-			<name>MIT</name>
-			<url>http://www.opensource.org/licenses/mit-license.php</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<dependencies>
-		<dependency>
-			<!-- sounds funny, but we are testing the testng parser with JUnit :) -->
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <!-- sounds funny, but we are testing the testng parser with JUnit :) -->
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

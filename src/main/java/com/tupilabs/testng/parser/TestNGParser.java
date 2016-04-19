@@ -28,6 +28,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -46,15 +48,15 @@ public class TestNGParser implements Serializable {
 	private static final long serialVersionUID = -6714585408222816355L;
 
 	private static final String APACHE_EXT_DTD = "http://apache.org/xml/features/nonvalidating/load-external-dtd";
+	
+	private static final Logger LOGGER = Logger.getLogger(TestNGParser.class.getName());
 
 	/**
 	 * Parses the content of an input stream and returns a Suite.
 	 * 
-	 * @param inputStream the input stream.
+	 * @param file the input file
 	 * @return List of Resulting object.
-	 * @throws SAXException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
+	 * @throws ParserException in case of any exception found by the parser
 	 */
 	public List<Suite> parse(File file) throws ParserException {
 
@@ -66,8 +68,11 @@ public class TestNGParser implements Serializable {
 		try {
 			factory.setFeature(APACHE_EXT_DTD, false);
 		} catch (ParserConfigurationException e) {
+		    LOGGER.log(Level.SEVERE, e.getMessage(), e);
 		} catch (SAXNotRecognizedException e) {
+		    LOGGER.log(Level.SEVERE, e.getMessage(), e);
 		} catch (SAXNotSupportedException e) {
+		    LOGGER.log(Level.SEVERE, e.getMessage(), e);
 		}
 
 		SAXParser parser = null;

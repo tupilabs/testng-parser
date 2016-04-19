@@ -28,7 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Represents the <test> tag. This tag is child of the <suite> tag.
+ * Represents the &lt;test&gt; tag. This tag is child of the &lt;suite&gt; tag.
  * @since 0.1
  */
 public class Test implements Serializable {
@@ -51,11 +51,11 @@ public class Test implements Serializable {
 	 */
 	private String finishedAt;
 	/**
-	 * The list of <class> tags.
+	 * The list of &lt;class&gt; tags.
 	 */
 	private List<Class> classes;
 	/**
-	 * Default constructor. Initializes the list of <class> tags.
+	 * Default constructor. Initializes the list of &lt;class&gt; tags.
 	 */
 	public Test() {
 		super();
@@ -118,14 +118,14 @@ public class Test implements Serializable {
 		this.finishedAt = finishedAt;
 	}
 	/**
-	 * Retrieves the list of <class> tags.
+	 * Retrieves the list of &lt;class&gt; tags.
 	 * @return the classes
 	 */
 	public List<Class> getClasses() {
 		return classes;
 	}
 	/**
-	 * Adds a class into the list of <class> tags.
+	 * Adds a class into the list of &lt;class&gt; tags.
 	 * @param clazz the class
 	 * @return true if added sucessfully, otherwise false.
 	 */
@@ -133,7 +133,7 @@ public class Test implements Serializable {
 		return this.classes.add(clazz);
 	}
 	/**
-	 * Removes a class from the list of <class> tags.
+	 * Removes a class from the list of &lt;class&gt; tags.
 	 * @param clazz the class
 	 * @return true if removed sucessfully, otherwise false.
 	 */

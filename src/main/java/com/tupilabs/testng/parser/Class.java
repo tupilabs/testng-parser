@@ -1,7 +1,7 @@
 /* 
  * The MIT License
  * 
- * Copyright (c) 2010 Bruno P. Kinoshita <http://www.kinoshita.eti.br>
+ * Copyright (c) 2010 Bruno P. Kinoshita http://www.kinoshita.eti.br
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * Represents the <class> tag. This tag is child of the <test> tag.
+ * Represents the &lt;class&gt; tag. This tag is child of the &lt;test&gt; tag.
  * @since 0.1
  */
 public class Class implements Serializable {
@@ -40,11 +40,11 @@ public class Class implements Serializable {
 	 */
 	private String name;
 	/**
-	 * The list of <test-method> tags.
+	 * The list of &lt;test-method&gt; tags.
 	 */
 	private Set<TestMethod> testMethods;
 	/**
-	 * Default constructor. Initializes the list of <test-method> tags.
+	 * Default constructor. Initializes the list of &lt;test-method&gt; tags.
 	 */
 	public Class() {
 		super();
@@ -65,14 +65,14 @@ public class Class implements Serializable {
 		this.name = name;
 	}
 	/**
-	 * Retrieves the list of <test-method> tags.
+	 * Retrieves the list of &lt;test-method&gt; tags.
 	 * @return the testMethods
 	 */
 	public Set<TestMethod> getTestMethods() {
 		return testMethods;
 	}
 	/**
-	 * Adds a test method into the list of <test-method> tags.
+	 * Adds a test method into the list of &lt;test-method&gt; tags.
 	 * @param testMethod the test method.
 	 * @return true if added sucessfully, otherwise false.
 	 */
@@ -87,7 +87,7 @@ public class Class implements Serializable {
 		return this.testMethods.add(testMethod);
 	}
 	/**
-	 * Removes a test method from the list of <test-method> tags.
+	 * Removes a test method from the list of &lt;test-method&gt; tags.
 	 * @param testMethod the test method.
 	 * @return true if removed sucessfully, otherwise false.
 	 */

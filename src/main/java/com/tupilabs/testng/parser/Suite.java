@@ -28,7 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Represents the <suite> tag.
+ * Represents the &lt;suite&gt; tag.
  * @since 0.1
  */
 public class Suite implements Serializable {
@@ -51,7 +51,7 @@ public class Suite implements Serializable {
 	 */
 	private String finishedAt;
 	/**
-	 * List of <test> tags.
+	 * List of &lt;test&gt; tags.
 	 */
 	private List<Test> tests;
 	/**
@@ -59,7 +59,7 @@ public class Suite implements Serializable {
 	 */
 	private String file;
 	/**
-	 * Default constructor. Initializes the list of <test> tags.
+	 * Default constructor. Initializes the list of &lt;test&gt; tags.
 	 */
 	public Suite() {
 		super();
@@ -122,14 +122,14 @@ public class Suite implements Serializable {
 		this.finishedAt = finishedAt;
 	}
 	/**
-	 * Retrieves the list of <test> tags.
+	 * Retrieves the list of &lt;test&gt; tags.
 	 * @return the tests
 	 */
 	public List<Test> getTests() {
 		return tests;
 	}
 	/**
-	 * Adds a test into the list of <test> tags.
+	 * Adds a test into the list of &lt;test&gt; tags.
 	 * @param test the test.
 	 * @return true if added sucessfully, otherwise false.
 	 */
@@ -137,7 +137,7 @@ public class Suite implements Serializable {
 		return this.tests.add(test);
 	}
 	/**
-	 * Removes a test from the list of <test> tags.
+	 * Removes a test from the list of &lt;test&gt; tags.
 	 * @param test the test.
 	 * @return true if removed sucessfully, otherwise false.
 	 */
