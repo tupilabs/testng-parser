@@ -62,7 +62,7 @@ public class TestNGXmlHandler extends DefaultHandler implements Serializable {
 	 */
 	public TestNGXmlHandler() {
 		super();
-		suitesList = new ArrayList<>();
+		suitesList = new ArrayList<Suite>();
 	}
 	/*
 	 * (non-Javadoc)
