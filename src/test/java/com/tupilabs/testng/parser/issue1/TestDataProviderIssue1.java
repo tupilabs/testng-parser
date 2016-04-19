@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -22,8 +23,9 @@ public class TestDataProviderIssue1 {
                 .getResource("com/tupilabs/testng/parser/issue1/testng-results.xml");
         File file = new File(url.getFile());
 
-        Suite suite = parser.parse(file);
-        System.out.println(suite.getName());
+        List<Suite> suites = parser.parse(file);
+        for (Suite suite : suites){
+            System.out.println(suite.getName());
         for (com.tupilabs.testng.parser.Test test : suite.getTests()) {
             System.out.println("\t" + test.getName());
             for (com.tupilabs.testng.parser.Class clazz : test.getClasses()) {
@@ -34,6 +36,7 @@ public class TestDataProviderIssue1 {
                 }
             }
         }
+    }
     }
 
 }

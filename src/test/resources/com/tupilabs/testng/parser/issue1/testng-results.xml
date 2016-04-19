@@ -65,4 +65,67 @@
       </class> <!-- com.tupilabs.test.yahoonews.MyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+  <suite name="suite2" duration-ms="49" started-at="2013-04-16T22:14:29Z" finished-at="2013-04-16T22:14:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="49" started-at="2013-04-16T22:14:29Z" finished-at="2013-04-16T22:14:29Z">
+      <class name="com.tupilabs.test.yahoonews.MyTest">
+        <test-method status="PASS" signature="validateNameField(java.lang.String)[pri:0, instance:com.tupilabs.test.yahoonews.MyTest@c75e4fc]" name="validateNameField" duration-ms="24" started-at="2013-04-16T19:14:29Z" data-provider="validateFieldBase" finished-at="2013-04-16T19:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[<script language='JavaScript'> alert('Hello') </script>]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method status="PASS" signature="validateNameField(java.lang.String)[pri:0, instance:com.tupilabs.test.yahoonews.MyTest@c75e4fc]" name="validateNameField" duration-ms="1" started-at="2013-04-16T19:14:29Z" data-provider="validateFieldBase" finished-at="2013-04-16T19:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ASDGFFLKLKLKlddvddsghdsh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method status="FAIL" signature="validateNameField(java.lang.String)[pri:0, instance:com.tupilabs.test.yahoonews.MyTest@c75e4fc]" name="validateNameField" duration-ms="1" started-at="2013-04-16T19:14:29Z" data-provider="validateFieldBase" finished-at="2013-04-16T19:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12344557688008853]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method status="PASS" signature="validateNameField(java.lang.String)[pri:0, instance:com.tupilabs.test.yahoonews.MyTest@c75e4fc]" name="validateNameField" duration-ms="1" started-at="2013-04-16T19:14:29Z" data-provider="validateFieldBase" finished-at="2013-04-16T19:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[:!@#$%^&*()_.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method status="PASS" signature="validateNameField(java.lang.String)[pri:0, instance:com.tupilabs.test.yahoonews.MyTest@c75e4fc]" name="validateNameField" duration-ms="0" started-at="2013-04-16T19:14:29Z" data-provider="validateFieldBase" finished-at="2013-04-16T19:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ASDASDasdas-123123211212&^%&^%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+      </class> <!-- com.tupilabs.test.yahoonews.MyTest -->
+    </test> <!-- Default test -->
+  </suite> <!--suite2 -->
 </testng-results>
