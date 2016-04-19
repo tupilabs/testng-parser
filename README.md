@@ -15,9 +15,9 @@ Below an example of how to use this parser.
     URL url = cl.getResource("com/tupilabs/testng/parser/testng-results.xml");
     File file = new File(url.getFile());
 
-    Suite suite = null;
+    List<Suite> suites = null;
     try {
-        suite = this.parser.parse(file);
+        suites = this.parser.parse(file);
     } catch (ParserException e) {
         fail("Failed to parse testng file '" + file + "': " + e.getMessage());
     }
