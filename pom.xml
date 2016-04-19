@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>testng-parser</artifactId>
-    <version>0.4</version>
+    <version>0.5-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>TestNG Parser</description>
@@ -30,7 +30,7 @@
         <url>https://github.com/tupilabs/testng-parser</url>
         <connection>scm:git:git://github.com/tupilabs/testng-parser.git</connection>
         <developerConnection>scm:git:git@github.com:tupilabs/testng-parser.git</developerConnection>
-      <tag>testng-parser-0.4</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <issueManagement>
